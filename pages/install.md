@@ -14,8 +14,8 @@ The external Javascript dependencies of the project are resolved with [bower](ht
 ```
  sudo apt-get update
  sudo apt-get install nodejs npm
-
 ```
+
 Once `npm` is installed, execute the shell script `init-repo.sh`, which will download `bower` and resolve the Javascript dependencies to `app/assets/javascripts/libs/`. The list of Javascript dependencies is defined in `bower.json`.
 
 #### Enter database and elasticsearch credentials
@@ -77,7 +77,7 @@ Before starting the application complete the followings:
  * Edit the `newsleak.properties` file.
  Set the different configurations accordingly.
 
-###### NEWSLEAK CONFIG SECTIONS
+##### NEWSLEAK CONFIG SECTIONS
 
  Set the `dbname` to a new database name for new/s/leak. Example
  ```
@@ -102,37 +102,40 @@ Set `documentname` to the name of the document as it is specified in (1.) above.
 documentname = document.csv
 ```
 Finally set `threads` to a number of threads you want to use to have parallel event time extraction. 10 might be enough for a single CPU with 4 cores. See details below to experiment with different threads for time expression
-###### HEIDLTIME CONFIG SECTIONS
+##### HEIDLTIME CONFIG SECTIONS
 The only configuration you have to change in this section is the `treeTaggerHome`. Provide an absolute path to the `TreeTager` folder which is found under `NEWSLEAKHOME`.
 
-* Open the `application.conf` file and make changes to the `Database configuration` section Example
+Open the `application.conf` file and make changes to the `Database configuration` section Example
   ```
   db.newsleak.driver=org.postgresql.Driver
   db.newsleak.url="jdbc:postgresql://localhost:5432/newsleak"
   db.newsleak.username="newsreader"
   db.newsleak.password="newsreader"
   ```
-  Also, change to the elastic search related configurations. The appropriate elasticsearch version supported is available under `NEWSLEAKHOME`. If you plan your existing elasticsearch installation, make sure they have the same versions (`2.2.0`)
+  
+Also, change to the elastic search related configurations. The appropriate elasticsearch version supported is available under `NEWSLEAKHOME`. If you plan your existing elasticsearch installation, make sure they have the same versions (`2.2.0`)
+
 Make sure also you have the same `clustername` in the `elasticsearch.yml` file as shown below.
-````
+```
 es.clustername = "NewsLeaksCluster"
 es.address = "localhost"
 es.port = 9501
 es.indices =  [newsleak]
 es.index.default = "newsleak"
+```
 
-````
-
-* Edit the `elasticsearch.yml` so that the name of the cluster matches the name given in the `application.conf` file.
+Edit the `elasticsearch.yml` so that the name of the cluster matches the name given in the `application.conf` file.
 ```
 cluster.name: NewsLeaksCluster
 ```
+
 Also give an available ports and bind address for Elasticsearch.
 ```
 network.host: 0.0.0.0
 transport.tcp.port: 9501
 http.port: 9500
 ```
+
 Finally, provide the absolute path of Elasticsearch for `path.data` and `path.home`
 ```
  path.data: /ABSOLUTE/PATH/TO/elasticsearch-2.2.0
@@ -149,7 +152,7 @@ java -jar newsleakprocessor.jar -a
 ```
 * Otherwise, you can run the components separately, but in the order provided as floows
 ```
-1. java -jar newsleakprocessor.jar -h  //// Extract event time expressions
+1. java -jar newsleakprocessor.jar -h //// Extract event time expressions
 2. java -jar newsleakprocessor.jar -g //// Extract named entities
 3. java -jar newsleakprocessor.jar -d //// Import data to database
 4. java -jar newsleakprocessor.jar -e //// Build elastic search index
@@ -170,7 +173,6 @@ bin/new-s-leak -Dconfig.file=application.conf
 Want to find a bug, contribute some code, or improve documentation? Read up on our guidelines for [contributing](https://github.com/tudarmstadt-lt/newsleak/blob/master/CONTRIBUTING.md) and then check out one of our issues.
 
 ## License
-
 ```
 Copyright (C) 2016 Language Technology Group and Interactive Graphics Systems Group, Technische Universität Darmstadt, Germany
 
