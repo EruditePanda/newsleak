@@ -21,7 +21,7 @@ description: "new/s/leak represents the front-end layer application of the distr
 
 # This URL is the main adresse. Don't include a slash at the end.
 #
-url: "//tudarmstadt-lt.github.io/newsleak-frontend/"
+url: "//uhh-lt.github.io/newsleak-frontend/"
 baseurl: ""
 
 # This is for the editing function in _/includes/improve_content.html
@@ -88,7 +88,7 @@ defaults:
       show_meta: false 	# Show metadata beneath all pages
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: "your_author_name"
+      author: "gwiedemann"
   -
     scope:
       path: ""
@@ -97,7 +97,7 @@ defaults:
       show_meta: false   # Show metadata beneath all posts
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: "your_author_name"
+      author: "gwiedemann"
 
 
 
@@ -208,5 +208,5 @@ sass:
 google_analytics_tracking_id: UA-101167596-1
 
 # Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 theme: jekyll-theme-slate

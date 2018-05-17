@@ -3,7 +3,7 @@ layout: page-fullwidth
 title: "NEW/S/LEAK Installation"
 permalink: "/install/"
 ---
-[![newsleak](http://newsleak.io/wp-content/uploads/2016/03/cropped-logo-draft.png)](https://tudarmstadt-lt.github.io/newsleak-frontend/install/)
+[![newsleak](http://newsleak.io/wp-content/uploads/2016/03/cropped-logo-draft.png)](https://uhh-lt.github.io/newsleak-frontend/install/)
 
 ## Project Setup
 
@@ -46,7 +46,7 @@ If you have very big data and want to run each components of **new/s/leak** indi
 
 * First install docker container in your environment. This instruction is based on docker version of 1.12.5 for Client and Server. Get more [here](https://docs.docker.com/engine/installation/)
 * Prepare the **document.csv** and **metadata.csv** files as it described below in the **pipeline** section.
-* Download the required resources from [here](https://github.com/tudarmstadt-lt/newsleak-frontend/releases/download/V1.0-beta-1/newsleakdocker.zip) and unzip the zip file.
+* Download the required resources from [here](https://github.com/uhh-lt/newsleak-frontend/releases/download/V1.0-beta-1/newsleakdocker.zip) and unzip the zip file.
 * Put the **document.csv** and **metadata.csv** files you prepare into the **docker/newsleakpipeline/** folder, and run the command ``` sh run.sh``` under **docker/** to start new/s/leak.
 * Access the application at [localhost] (http://localhost:9000) once the docker compilation is completed and the new/s/leak application started. You see the following lines when the application is started
 
@@ -60,7 +60,7 @@ Note: If you want to run with the simple demo files included (**document.csv** a
 
 
 ## The new/s/leak Pipeline
-We have compiled everything required to start the new/s/leak application. You can download the required resources from [here](https://github.com/tudarmstadt-lt/newsleak-frontend/releases/download/V1.0-beta-1/newsleak.7z). Unzip the zip file and we call this **NEWSLEAKHOME**
+We have compiled everything required to start the new/s/leak application. You can download the required resources from [here](https://github.com/uhh-lt/newsleak-frontend/releases/download/V1.0-beta-1/newsleak.7z). Unzip the zip file and we call this **NEWSLEAKHOME**
 
 ### System requirements and Configurations
 1. Java 8 and above
@@ -170,7 +170,7 @@ bin/new-s-leak -Dconfig.file=application.conf
 ```
 ## Want to help?
 
-Want to find a bug, contribute some code, or improve documentation? Read up on our guidelines for [contributing](https://github.com/tudarmstadt-lt/newsleak/blob/master/CONTRIBUTING.md) and then check out one of our issues.
+Want to find a bug, contribute some code, or improve documentation? Read up on our guidelines for [contributing](https://github.com/uhh-lt/newsleak/blob/master/CONTRIBUTING.md) and then check out one of our issues.
 
 ## License
 ```
