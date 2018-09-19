@@ -21,7 +21,7 @@ description: "new/s/leak represents the front-end layer application of the distr
 
 # This URL is the main adresse. Don't include a slash at the end.
 #
-url: "//uhh-lt.github.io/newsleak-frontend/"
+url: "//uhh-lt.github.io/newsleak"
 baseurl: ""
 
 # This is for the editing function in _/includes/improve_content.html

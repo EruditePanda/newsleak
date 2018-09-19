@@ -15,11 +15,11 @@
   - title: User Manual
     url: /documentation
   - title: Java Doc.
-    url: https://uhh-lt.github.io/newsleak-frontend/scaladoc/index.html
+    url: https://uhh-lt.github.io/newsleak/scaladoc/index.html
 
 
 - title: Source
-  url: "http://github.com/uhh-lt/newsleak-frontend"
+  url: "http://github.com/uhh-lt/newsleak"
   side: left
 
 - title: Project Description
